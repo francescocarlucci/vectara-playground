@@ -4,10 +4,34 @@ import streamlit as st
 
 st.set_page_config(
     page_title="Vectara Playground",
-    page_icon="🤖"
+    page_icon="⚡"
 )
 
-st.header('🤖 Vectara Playground')
+st.header('⚡ Vectara Playground')
+
+st.success("This is a demo project related to the [Learn LangChain](https://learnlangchain.org/) mini-course.")
+
+st.write('''
+Vectara is vector database solution that simplifies the process of indexing and semantically searching
+different types of documents (even of significant size) through a simple and convenient API. With this
+"playground", you can familiarize with the Vectara API, format and debug the payload editing the most
+important parameters via the interface, and see the results of your search queries. 
+''')
+
+st.write('''
+Of course, before running queries you have to:
+
+- sign up to Vectara.com
+- create a "corpus" (it's Vectara's way to name document containers)
+- upload documents to your Corpus
+- create an API key
+''')
+
+st.write('''
+Document uploading/indexing can also be done via API, maybe that will be the next step for this little playground :)
+''')
+
+st.info("You need your own Vectara keys. The form will process your keys safely and never store them anywhere.", icon="🔒")
 
 vectara_api_key = st.text_input("Vectara API Key")
 
